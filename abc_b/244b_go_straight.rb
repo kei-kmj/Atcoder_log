@@ -1,37 +1,31 @@
 # frozen_string_literal: true
 
+# [[3,3]].map{|i,j| p [[i-1],[j-0]]}
 
 n = gets.to_i
-t = gets.chomp.chars
+t = gets.chars
+a = [[0, 0]]
+p t
+r = 0
 
-x = [1,0,-1,0]
-y = [0,-1,0,1]
+t.each do |k|
+  if k == "S"
+    r += 1
+  else
+    if r % 4 == 0
+      a = a.map { |i| p i }
+      p a
+    elsif r % 4 == 1
+      a = a.map { |i| p a << [i[0]] }
+      p a
+    elsif r % 4 == 2
+      a = a.map { |i| p i }
+      p a
+    else
+      a = a.map { |i| p i}
+      p a
+    end
+  end
+end
 
-a,b,d = 0,0,0
-
-# d&3で3との論理積をとっている
-t.each { _1 == ?S ? (a += x[d&3]; b += y[d&3]) : d += 1 }
-
-puts [a, b].join(' ')
-
-# a = 0
-# b = 0
-# r = 0
-#
-# t.each do |k|
-#   if k == "R"
-#     r += 1
-#   else
-#     if r % 4 == 0
-#       a += 1
-#     elsif r % 4 == 1
-#       b -= 1
-#     elsif r % 4 == 2
-#       a -= 1
-#     else
-#       b += 1
-#     end
-#   end
-# end
-#
-# puts [a, b].join(' ')
+# p a
