@@ -1,4 +1,4 @@
 
 a,b,x = gets.split.map &:to_i
 
-puts b > a && x >= a && x <= b ? :YES : :NO
+puts x >= a && x <= (a + b) ? :YES : :NO
