@@ -1,0 +1,3 @@
+
+
+puts gets.capitalize
