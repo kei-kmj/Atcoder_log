@@ -1,0 +1,1 @@
+p gets.split.join('').to_i*2
