@@ -1,0 +1,1 @@
+puts gets.chomp.chars.repeated_permutation(2).map(&:join).sort[gets.to_i - 1]
